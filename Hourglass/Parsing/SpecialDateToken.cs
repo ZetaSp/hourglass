@@ -31,6 +31,11 @@ namespace Hourglass.Parsing
         ChristmasDay,
 
         /// <summary>
+        /// Represents Chinese National Day (Oct 1).
+        /// </summary>
+        CNNationalDay,
+
+        /// <summary>
         /// Represents New Year's Eve (December 31).
         /// </summary>
         NewYearsEve
@@ -55,6 +60,11 @@ namespace Hourglass.Parsing
                 SpecialDate.ChristmasDay,
                 12 /* month */,
                 25 /* day */),
+
+            new SpecialDateDefinition(
+                SpecialDate.CNNationalDay,
+                10 /* month */,
+                1 /* day */),
 
             new SpecialDateDefinition(
                 SpecialDate.NewYearsEve,

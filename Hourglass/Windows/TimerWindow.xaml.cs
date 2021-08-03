@@ -589,6 +589,16 @@ namespace Hourglass.Windows
             this.TitleTextBox.Text = this.Timer.Options.Title;
             this.TimerTextBox.Text = this.LastTimerStart != null ? this.LastTimerStart.ToString() : string.Empty;
 
+            // Embedded Translator
+            //this.TimerTextBox.Text = this.TimerTextBox.Text.Replace("  ", " ");
+            this.TimerTextBox.Text = System.Text.RegularExpressions.Regex.Replace(this.TimerTextBox.Text, @"\s+", " ");
+            this.TimerTextBox.Text = System.Text.RegularExpressions.Regex.Replace(this.TimerTextBox.Text, @"([\u4e00-\u9fa5])( )([\u4e00-\u9fa5])", "$1$3");
+            this.TimerTextBox.Text = System.Text.RegularExpressions.Regex.Replace(this.TimerTextBox.Text, @"([\u4e00-\u9fa5])([A-Za-z0-9])", "$1 $2");
+            this.TimerTextBox.Text = System.Text.RegularExpressions.Regex.Replace(this.TimerTextBox.Text, @"([A-Za-z0-9])([\u4e00-\u9fa5])", "$1 $2");
+            this.TimerTextBox.Text = System.Text.RegularExpressions.Regex.Replace(this.TimerTextBox.Text, @"(上午|中午|下午|晚上)\s?([0-9]*)\s*$", "$1 $2 点");
+            this.TimerTextBox.Text = System.Text.RegularExpressions.Regex.Replace(this.TimerTextBox.Text, @"([0-9]*)\s*月\s*([0-9]*)\s*$", "$1 月 $2 日");
+            this.TimerTextBox.Text = System.Text.RegularExpressions.Regex.Replace(this.TimerTextBox.Text, @"(到[0-9]*)$", "$1 点");
+
             textBoxToFocus = textBoxToFocus ?? this.TimerTextBox;
             textBoxToFocus.SelectAll();
             textBoxToFocus.Focus();

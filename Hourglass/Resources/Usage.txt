@@ -1,258 +1,252 @@
-Usage: {0} [OPTIONS] [<input>]
-A simple countdown timer for Windows.
+﻿使用方法: {0} [选项] [<输入>]
+一个简单的 Windows 倒数计时器。
 
-  <input>
-        The input used to start the timer.
-
-        For example:
-        "5"                     count down for 5 minutes
-        "5:30"                  count down for 5 minutes 30 seconds
-        "7:30:00"               count down for 7 hours 30 minutes
-        "5 minutes"             count down for 5 minutes
-        "5 minutes 30 seconds"  count down for 5 minutes 30 seconds
-        "7 hours 30 minutes"    count down for 7 hours 30 minutes
-        "01/01/20"*             count down until January 1, 2020
-        "01/01/2020"*           count down until January 1, 2020
-        "January 1, 2020"*      count down until January 1, 2020
-        "January 1"*            count down until January 1
-        "2 pm"                  count down until 2 pm
-        "2:30 pm"               count down until 2:30 pm
-        "noon"                  count down until noon
-        "midnight"              count down until midnight
-        "Friday"                count down until midnight Friday
+	<输入>
+	启动计时的输入。
 
-        * The order of the day, month, and year depends on your system settings.
+	例如:
+	"5"			倒计时 5 分钟
+	"5:30"			倒计时 5 分钟 30 秒
+	"7:30:00"		倒计时 7 小时 30 分钟
+	"5 分钟"		倒计时 5 分钟
+	"5 分钟 30 秒"		倒计时 5 分钟 30 秒
+	"7 小时 30 分钟"	倒计时 7 小时 30 分钟
+	"21/01/01"*		倒计时到 2021 年 1 月 1 日
+	"2021/01/01"*		倒计时到 2021 年 1 月 1 日
+	"January 1, 2021"*	倒计时到 2021 年 1 月 1 日
+	"January 1"*		倒计时到 1 月 1 日
+	"下午 2 点"		倒计时到下午 2 点
+	"14:30"			倒计时到下午 2 点半
+	"中午"			倒计时到中午
+	"午夜"			倒计时到午夜
+	"周五"			倒计时到周五晚上
 
-        Variations of some of these formats are also supported.
+	* 年月日顺序取决于系统设置。
 
-Options:
-  --title <title>
-        Sets the title for the timer.
+	支持不同的叫法，比如分和分钟、周五和星期五。
 
-        Required        no
-        Default value   (none)
-        Alias           -t
+选项:
+	--title <标题>
+	设置计时标题。
 
-  --always-on-top on|off|last
-        Displays the timer window on top of other windows.
+	必填		否
+	默认		空白
+	缩写		-t
 
-        Required        no
-        Default value   last
-        Alias           -a
+	--always-on-top on|off|last
+	将窗口置顶。
 
-  --full-screen on|off|last
-        Displays the timer window in full-screen mode.
+	必填		否
+	默认		last
+	缩写		-a
 
-        Required        no
-        Default value   last
-        Alias           -f
+	--full-screen on|off|last
+	全屏显示窗口。
 
-  --prompt-on-exit on|off|last
-        Displays a prompt before closing the timer window.
+	必填		否
+	默认		last
+	缩写		-f
 
-        Required        no
-        Default value   last
-        Alias           -o
+	--prompt-on-exit on|off|last
+	退出前显示确认提示。
 
-  --show-progress-in-taskbar on|off|last
-        Shows progress in taskbar.
+	必填		否
+	默认		last
+	缩写		-o
 
-        Required        no
-        Default value   last
-        Alias           -y
+	--show-progress-in-taskbar on|off|last
+	在任务栏显示计时进度。
 
-  --do-not-keep-awake on|off|last
-        Do not keep the computer awake while the timer is running.
+	必填		否
+	默认		last
+	缩写		-y
 
-        Required        no
-        Default value   last
-        Alias           -k
+	--do-not-keep-awake on|off|last
+	计时中不保持电脑唤醒。
 
-  --show-in-notification-area on|off|last
-        Shows an icon for the app in the notification area (system tray).
+	必填		否
+	默认		last
+	缩写		-k
 
-        Required        no
-        Default value   last
-        Alias           -n
+	--show-in-notification-area on|off|last
+	在通知栏（系统托盘）显示图标。
 
-  --reverse-progress-bar on|off|last
-        Reverses the direction of the progress bar, causing it to run backwards.
+	必填		否
+	默认		last
+	缩写		-n
 
-        Required        no
-        Default value   last
-        Alias           -g
+	--reverse-progress-bar on|off|last
+	反转进度条方向，由满值减少。
 
-  --show-time-elapsed on|off|last
-        Shows the time elapsed since the timer was started, rather than the
-        time left until the timer expires.
+	必填		否
+	默认		last
+	缩写		-g
 
-        Required        no
-        Default value   last
-        Alias           -u
+	--show-time-elapsed on|off|last
+	显示已用时间，而非剩余时间。
 
-  --loop-timer on|off|last
-        Loops the timer when it expires.
+	必填		否
+	默认		last
+	缩写		-u
 
-        Required        no
-        Default value   last
-        Alias           -l
+	--loop-timer on|off|last
+	循环计时。
 
-  --pop-up-when-expired on|off|last
-        Pops up the timer window when the timer expires.
+	必填		否
+	默认		last
+	缩写		-l
 
-        Required        no
-        Default value   last
-        Alias           -p
+	--pop-up-when-expired on|off|last
+	结束时弹出窗口。
 
-  --close-when-expired on|off|last
-        Closes the timer window when the timer expires.
+	必填		否
+	默认		last
+	缩写		-p
 
-        Required        no
-        Default value   last
-        Alias           -e
+	--close-when-expired on|off|last
+	结束后关闭窗口（退出程序）。
 
-  --shut-down-when-expired on|off
-        Shuts down windows when the timer expires.
+	必填		否
+	默认		last
+	缩写		-e
 
-        Required        no
-        Default value   off
-        Alias           -x
+	--shut-down-when-expired on|off
+	结束后关机。
 
-  --theme last|<theme>
-        Sets the theme of the timer window.
+	必填		否
+	默认		off
+	缩写		-x
 
-        You can specify the name of one of the built-in themes, or the name of
-        one of the themes that you have defined yourself.
+	--theme last|<主题名称>
+	设置窗口主题。
 
-        The built-in themes are:
+	你可以使用内置主题，也可以使用自定义的。
 
-            red             red-dark
-            orange          orange-dark
-            yellow          yellow-dark
-            green           green-dark
-            blue            blue-dark
-            purple          purple-dark
-            gray            gray-dark
-            black           black-dark
+	内置主题如下:
 
-        Required        no
-        Default value   last
-        Alias           -m
+		red		red-dark
+		orange		orange-dark
+		yellow		yellow-dark
+		green		green-dark
+		blue		blue-dark
+		purple		purple-dark
+		gray		gray-dark
+		black		black-dark
 
-  --sound none|last|<sound>
-        Plays a sound when the timer expires.
+	必填		否
+	默认		last
+	缩写		-m
 
-        Required        no
-        Default value   last
-        Alias           -s
-
-  --loop-sound on|off|last
-        Loops the sound that plays when the timer expires.
-
-        Required        no
-        Default value   last
-        Alias           -r
-
-  --open-saved-timers on|off|last
-        Opens all saved timers on start up.
-
-        Required        no
-        Default value   last
-        Alias           -v
-
-  --window-title none|app|left|elapsed|title|last
-        Sets the timer window title.
-
-        The options are:
-
-            none            Hides the timer window title bar.
-
-            app             Application name
-
-            left            Time remaining
-            elapsed         Time elapsed
-            title           Timer title
-
-            left+title      Time remaining � Timer title
-            elapsed+title   Time elapsed � Timer title
-
-            title+left      Timer title � Time remaining
-            title+elapsed   Timer title � Time elapsed
-
-        Required        no
-        Default value   last
-        Alias           -i
-
-  --window-state normal|maximized|minimized|last
-        Sets the state of the timer window.
-
-        Required        no
-        Default value   last
-        Alias           -w
-
-  --window-bounds <left>,<top>,<width>,<height>
-        Sets the size and position of the timer window.
-
-        <left> and <top> specify the position of the window's left and top
-        edges respectively in relation to the desktop in device-independent
-        pixels. If you specify auto for either of the <left> or <top> values,
-        the window will be positioned automatically.
-
-        <width> and <height> specify the width and height of the window
-        respectively in device-independent pixels. If you specify auto for
-        either of the <width> or <height> values, the window will be sized
-        automatically.
-
-        Required        no
-        Default value   last
-        Alias           -b
-
-  --lock-interface on|off
-        Prevents the user from starting, pausing, resetting, or stopping the
-        timer, changing the timer options, or closing the timer window until the
-        timer expires.
-
-        This option is never remembered. It must be specified as a command-line
-        argument each time the timer is started.
-
-        Timers that are started with this option turned on never appear in the
-        "Saved timers" list.
-
-        Required        no
-        Default value   off
-        Alias           -z
-
-  --use-factory-defaults
-        If specified, any options that are not explicitly set with another
-        switch are set to their factory default setting rather than the last
-        used setting.
-
-        The factory default settings are:
-            --title                         (none)
-            --always-on-top                 off
-            --full-screen                   off
-            --prompt-on-exit                on
-            --do-not-keep-awake             off
-            --show-in-notification-area     off
-            --show-time-elapsed             off
-            --loop-timer                    off
-            --show-progress-in-taskbar      on
-            --pop-up-when-expired           on
-            --close-when-expired            off
-            --shut-down-when-expired        off
-            --theme                         blue
-            --sound                         normal beep
-            --loop-sound                    off
-            --open-saved-timers             off
-            --window-state                  normal
-            --window-bounds                 auto,auto,350,150
-            --lock-interface                off
-
-        Required        no
-        Alias           -d
-
-  --help
-        Shows this message.
-
-        Required        no
-        Alias           -h, -?
+	--sound none|last|<声音>
+	结束时播放声音。
+
+	可选声音如下:
+
+		quiet beep	较轻
+		normal beep	一般
+		loud beep	较响
+
+	必填		否
+	默认		last
+	缩写		-s
+
+	--loop-sound on|off|last
+	Loops the sound that plays when the timer expires.
+
+	必填		否
+	默认		last
+	缩写		-r
+
+	--open-saved-timers on|off|last
+	启动时打开所有储存的计时。
+
+	必填		否
+	默认		last
+	缩写		-v
+
+	--window-title none|app|left|elapsed|title|last
+	设置窗口标题。
+
+	选项如下:
+
+		none		隐藏标题栏
+
+		app		程序名称
+
+		left		剩余时间
+		elapsed		已用时间
+		title		计时标题
+
+		left+title	剩余时间 · 计时标题
+		elapsed+title	已用时间 · 计时标题
+
+		title+left	计时标题 · 剩余时间
+		title+elapsed	计时标题 · 已用时间
+
+	必填		否
+	默认		last
+	缩写		-i
+
+	--window-state normal|maximized|minimized|last
+	设置窗口状态。
+
+	必填		否
+	默认		last
+	缩写		-w
+
+	--window-bounds <左>,<上>,<宽度>,<高度>
+	设置窗口大小和位置。
+
+	<左> 与 <上> 指定窗口的左侧和上侧距离，以像素为单位。
+	如果设置其中任意一个为 auto，窗口将自动定位。
+
+	<宽度> 与 <高度> 指定窗口大小，以像素为单位。
+	如果设置其中任意一个为 auto，窗口将自动调整大小。
+
+	必填		否
+	默认		last
+	缩写		-b
+
+	--lock-interface on|off
+	阻止用户操控（启动、暂停、重置、停止、更改选项、退出等），直到计时结束。
+
+	该选项不会保存。每次启动时必须指定该命令行选项。
+
+	启用此选项的计时也不会被储存。
+
+	必填		否
+	默认		off
+	缩写		-z
+
+	--use-factory-defaults
+	如果启用该选项，没有在其他选项中指定的设置都会使用默认设置。
+
+	默认设置如下:
+		--title				(none)
+		--always-on-top		off
+		--full-screen			off
+		--prompt-on-exit		on
+		--do-not-keep-awake		off
+		--show-in-notification-area	off
+		--show-time-elapsed		off
+		--loop-timer			off
+		--show-progress-in-taskbar	on
+		--pop-up-when-expired		on
+		--close-when-expired		off
+		--shut-down-when-expired	off
+		--theme				blue
+		--sound				normal beep
+		--loop-sound			off
+		--open-saved-timers		off
+		--window-state			normal
+		--window-bounds		auto,auto,350,150
+		--lock-interface		off
+
+	必填		否
+	缩写		-d
+
+	--help
+	显示该帮助信息。
+
+	必填		否
+	缩写		-h, -?

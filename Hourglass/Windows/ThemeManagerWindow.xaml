@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hourglass.Windows"
         mc:Ignorable="d"
-        Title="Manage Themes" Width="525" ResizeMode="NoResize" SizeToContent="Height" Closing="WindowClosing">
+        Title="管理主题" Width="525" ResizeMode="NoResize" SizeToContent="Height" Closing="WindowClosing">
     <StackPanel>
         <Border Background="#F9F9F9" BorderBrush="#DDDDDD" BorderThickness="0 0 0 1" Padding="8">
             <Grid>
@@ -16,9 +16,9 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
                 <ComboBox Grid.Column="0" x:Name="ThemesComboBox" Margin="4" SelectionChanged="ThemesComboBoxSelectionChanged"/>
-                <Button Grid.Column="1" x:Name="NewButton" Content="_New" Margin="4" MinWidth="75" Click="NewButtonClick"/>
+                <Button Grid.Column="1" x:Name="NewButton" Content="新建" Margin="4" MinWidth="75" Click="NewButtonClick"/>
                 <TextBox Grid.Column="2" x:Name="NameTextBox" Margin="4" Text="{Binding Path=Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextChanged="NameTextBoxTextChanged"/>
-                <Button Grid.Column="3" x:Name="DeleteButton" Content="_Delete" Margin="4" MinWidth="75" Click="DeleteButtonClick"/>
+                <Button Grid.Column="3" x:Name="DeleteButton" Content="删除" Margin="4" MinWidth="75" Click="DeleteButtonClick"/>
             </Grid>
         </Border>
         <Border Padding="12">
@@ -34,23 +34,23 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <local:ColorControl Grid.Row="0" Grid.Column="0" Text="Progress bar" Color="{Binding Path=ProgressBarColor, Mode=TwoWay}" Theme="{Binding}" ColorChanged="ColorControlColorChanged"/>
-                <local:ColorControl Grid.Row="0" Grid.Column="1" Text="Progress bar background" Color="{Binding Path=ProgressBackgroundColor, Mode=TwoWay}" Theme="{Binding}" ColorChanged="ColorControlColorChanged"/>
-                <local:ColorControl Grid.Row="1" Grid.Column="0" Text="Background" Color="{Binding Path=BackgroundColor, Mode=TwoWay}" Theme="{Binding}" ColorChanged="ColorControlColorChanged"/>
-                <local:ColorControl Grid.Row="1" Grid.Column="1" Text="Expiration flash" Color="{Binding Path=ExpirationFlashColor, Mode=TwoWay}" Theme="{Binding}" ColorChanged="ColorControlColorChanged"/>
-                <local:ColorControl Grid.Row="2" Grid.Column="0" Text="Primary text" Color="{Binding Path=PrimaryTextColor, Mode=TwoWay}" Theme="{Binding}" ColorChanged="ColorControlColorChanged"/>
-                <local:ColorControl Grid.Row="2" Grid.Column="1" Text="Primary text hint" Color="{Binding Path=PrimaryHintColor, Mode=TwoWay}" Theme="{Binding}" ColorChanged="ColorControlColorChanged"/>
-                <local:ColorControl Grid.Row="3" Grid.Column="0" Text="Secondary text" Color="{Binding Path=SecondaryTextColor, Mode=TwoWay}" Theme="{Binding}" ColorChanged="ColorControlColorChanged"/>
-                <local:ColorControl Grid.Row="3" Grid.Column="1" Text="Secondary text hint" Color="{Binding Path=SecondaryHintColor, Mode=TwoWay}" Theme="{Binding}" ColorChanged="ColorControlColorChanged"/>
-                <local:ColorControl Grid.Row="4" Grid.Column="0" Text="Button" Color="{Binding Path=ButtonColor, Mode=TwoWay}" Theme="{Binding}" ColorChanged="ColorControlColorChanged"/>
-                <local:ColorControl Grid.Row="4" Grid.Column="1" Text="Button hover" Color="{Binding Path=ButtonHoverColor, Mode=TwoWay}" Theme="{Binding}" ColorChanged="ColorControlColorChanged"/>
+                <local:ColorControl Grid.Row="0" Grid.Column="0" Text="进度" Color="{Binding Path=ProgressBarColor, Mode=TwoWay}" Theme="{Binding}" ColorChanged="ColorControlColorChanged"/>
+                <local:ColorControl Grid.Row="0" Grid.Column="1" Text="进度底色" Color="{Binding Path=ProgressBackgroundColor, Mode=TwoWay}" Theme="{Binding}" ColorChanged="ColorControlColorChanged"/>
+                <local:ColorControl Grid.Row="1" Grid.Column="0" Text="背景" Color="{Binding Path=BackgroundColor, Mode=TwoWay}" Theme="{Binding}" ColorChanged="ColorControlColorChanged"/>
+                <local:ColorControl Grid.Row="1" Grid.Column="1" Text="计时结束闪屏" Color="{Binding Path=ExpirationFlashColor, Mode=TwoWay}" Theme="{Binding}" ColorChanged="ColorControlColorChanged"/>
+                <local:ColorControl Grid.Row="2" Grid.Column="0" Text="计时" Color="{Binding Path=PrimaryTextColor, Mode=TwoWay}" Theme="{Binding}" ColorChanged="ColorControlColorChanged"/>
+                <local:ColorControl Grid.Row="2" Grid.Column="1" Text="计时空白提示" Color="{Binding Path=PrimaryHintColor, Mode=TwoWay}" Theme="{Binding}" ColorChanged="ColorControlColorChanged"/>
+                <local:ColorControl Grid.Row="3" Grid.Column="0" Text="标题" Color="{Binding Path=SecondaryTextColor, Mode=TwoWay}" Theme="{Binding}" ColorChanged="ColorControlColorChanged"/>
+                <local:ColorControl Grid.Row="3" Grid.Column="1" Text="标题空白提示" Color="{Binding Path=SecondaryHintColor, Mode=TwoWay}" Theme="{Binding}" ColorChanged="ColorControlColorChanged"/>
+                <local:ColorControl Grid.Row="4" Grid.Column="0" Text="按钮" Color="{Binding Path=ButtonColor, Mode=TwoWay}" Theme="{Binding}" ColorChanged="ColorControlColorChanged"/>
+                <local:ColorControl Grid.Row="4" Grid.Column="1" Text="按钮鼠标悬停" Color="{Binding Path=ButtonHoverColor, Mode=TwoWay}" Theme="{Binding}" ColorChanged="ColorControlColorChanged"/>
             </Grid>
         </Border>
         <Border Background="#F9F9F9" BorderBrush="#DDDDDD" BorderThickness="0 1 0 0" Padding="8">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button x:Name="SaveButton" Content="_Save" IsDefault="True" Margin="4" MinWidth="75" Click="SaveButtonClick"/>
-                <Button x:Name="CancelButton" Content="_Cancel" IsCancel="True" Margin="4" MinWidth="75" Click="CancelButtonClick"/>
-                <Button x:Name="CloseButton" Content="C_lose" IsDefault="True" Margin="4" MinWidth="75" Click="CloseButtonClick"/>
+                <Button x:Name="SaveButton" Content="保存" IsDefault="True" Margin="4" MinWidth="75" Click="SaveButtonClick"/>
+                <Button x:Name="CancelButton" Content="取消" IsCancel="True" Margin="4" MinWidth="75" Click="CancelButtonClick"/>
+                <Button x:Name="CloseButton" Content="关闭" IsDefault="True" Margin="4" MinWidth="75" Click="CloseButtonClick"/>
             </StackPanel>
         </Border>
     </StackPanel>

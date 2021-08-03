@@ -174,19 +174,23 @@ namespace Hourglass.Parsing
                 // Hour period
                 if (this.IsMidday)
                 {
-                    stringBuilder.Append(Resources.ResourceManager.GetString("NormalTimeTokenMiddaySuffix", provider));
+                    //stringBuilder.Append(Resources.ResourceManager.GetString("NormalTimeTokenMiddaySuffix", provider));
+                    stringBuilder.Insert(0, Resources.ResourceManager.GetString("NormalTimeTokenMiddaySuffix", provider));
                 }
                 else if (this.IsMidnight)
                 {
-                    stringBuilder.Append(Resources.ResourceManager.GetString("NormalTimeTokenMidnightSuffix", provider));
+                    //stringBuilder.Append(Resources.ResourceManager.GetString("NormalTimeTokenMidnightSuffix", provider));
+                    stringBuilder.Insert(0, Resources.ResourceManager.GetString("NormalTimeTokenMidnightSuffix", provider));
                 }
                 else if (this.HourPeriod == HourPeriod.Am)
                 {
-                    stringBuilder.Append(Resources.ResourceManager.GetString("NormalTimeTokenAmSuffix", provider));
+                    //stringBuilder.Append(Resources.ResourceManager.GetString("NormalTimeTokenAmSuffix", provider));
+                    stringBuilder.Insert(0, Resources.ResourceManager.GetString("NormalTimeTokenAmSuffix", provider));
                 }
                 else if (this.HourPeriod == HourPeriod.Pm)
                 {
-                    stringBuilder.Append(Resources.ResourceManager.GetString("NormalTimeTokenPmSuffix", provider));
+                    //stringBuilder.Append(Resources.ResourceManager.GetString("NormalTimeTokenPmSuffix", provider));
+                    stringBuilder.Insert(0, Resources.ResourceManager.GetString("NormalTimeTokenPmSuffix", provider));
                 }
 
                 return stringBuilder.ToString();

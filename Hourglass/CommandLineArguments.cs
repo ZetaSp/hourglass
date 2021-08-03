@@ -852,6 +852,18 @@ namespace Hourglass
                 case "last":
                     return last;
 
+                case "quiet beep":
+                    Sound sound1 = SoundManager.Instance.GetSoundByName("较轻", StringComparison.CurrentCultureIgnoreCase);
+                    return sound1;
+
+                case "normal beep":
+                    Sound sound2 = SoundManager.Instance.GetSoundByName("一般", StringComparison.CurrentCultureIgnoreCase);
+                    return sound2;
+
+                case "loud beep":
+                    Sound sound3 = SoundManager.Instance.GetSoundByName("较响", StringComparison.CurrentCultureIgnoreCase);
+                    return sound3;
+
                 default:
                     Sound sound = SoundManager.Instance.GetSoundByName(value, StringComparison.CurrentCultureIgnoreCase);
 
