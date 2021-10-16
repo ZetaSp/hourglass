@@ -1,7 +1,7 @@
-# Hourglass - zhCN Modified
+# Hourglass 汉化版
 ### 沙漏
 
-简洁的计时器。中文支持版。
+简洁的计时器。
 
 （Wix 安装包中文没弄完，程序本体已完成）
 
