@@ -1838,7 +1838,7 @@ namespace Hourglass.Properties {
         }
         
         /// <summary>
-        ///   查找类似 ^\s*((持续)?(计时)?计?直?等?到|(un)?till?|@)\s* 的本地化字符串。
+        ///   查找类似 ^\s*((持续)?(计时)?(计)?直?等?[到至]|(un)?till?|@)\s* 的本地化字符串。
         /// </summary>
         public static string TimerStartTokenUseDateTimeParserPattern {
             get {
