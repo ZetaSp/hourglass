@@ -143,7 +143,7 @@
     <comment>A format string that is the concatenation of the date and time, where {0} is the date and {1} is the time (e.g., "{0} at {1}" =&gt; "February 14, 2015 at 2 pm")</comment>
   </data>
   <data name="DateTimeTokenTimeOnlyFormatString" xml:space="preserve">
-    <value>持续到{0}</value>
+    <value>计时到{0}</value>
     <comment>A format string that contains the time only, where {0} is the time (e.g., "until {0}" =&gt; "until 2 pm")</comment>
   </data>
   <data name="RelativeDateTokenTodayName" xml:space="preserve">
@@ -695,7 +695,7 @@ $</value>
     <comment>A format string for a regular expression that matches a time only, where {0} is the time pattern</comment>
   </data>
   <data name="TimerStartTokenUseDateTimeParserPattern" xml:space="preserve">
-    <value>^\s*((持续)?直?等?到|(un)?till?|@)\s*</value>
+    <value>^\s*((持续)?(计时)?计?直?等?到|(un)?till?|@)\s*</value>
     <comment>A regular expression that indicates a preference for matching a date and/or time, rather than a time span, when parsing a timer start token</comment>
   </data>
   <data name="TimeSpanExtensionsUnitSeparator" xml:space="preserve">
@@ -1222,54 +1222,54 @@ $</value>
     <value>国庆节?</value>
   </data>
   <data name="ContextMenuMaximizeMenuItem" xml:space="preserve">
-    <value>Ma_ximize</value>
+    <value>最大化</value>
     <comment>The text for the maximize menu item, where the character following the optional underscore (_) is the access key</comment>
   </data>
   <data name="ContextMenuMinimizeMenuItem" xml:space="preserve">
-    <value>_Minimize</value>
+    <value>最小化</value>
     <comment>The text for the minimize menu item, where the character following the optional underscore (_) is the access key</comment>
   </data>
   <data name="ContextMenuRestoreMenuItem" xml:space="preserve">
-    <value>Rest_ore</value>
+    <value>恢复</value>
     <comment>The text for the restore menu item, where the character following the optional underscore (_) is the access key</comment>
   </data>
   <data name="ContextMenuPrefer24HourTimeMenuItem" xml:space="preserve">
-    <value>Prefer 24-_hour time when parsing</value>
+    <value>默认 24 小时制</value>
     <comment>The text for the prefer 24-hour time when parsing menu item, where the character following the optional underscore (_) is the access key</comment>
   </data>
   <data name="ContextMenuAboutMenuItem" xml:space="preserve">
-    <value>_About</value>
+    <value>关于</value>
     <comment>The text for the about menu item, where the character following the optional underscore (_) is the access key</comment>
   </data>
   <data name="License" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\License.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="AboutDialogCloseButtonContent" xml:space="preserve">
-    <value>_Close</value>
+    <value>关闭</value>
     <comment>The text for the close button in the about dialog, where the character following the optional underscore (_) is the access key</comment>
   </data>
   <data name="AboutDialogContributeOnGitHub" xml:space="preserve">
-    <value>Contribute on GitHub:</value>
+    <value>贡献:</value>
     <comment>The label used as a heading above the app GitHub address in the about dialog</comment>
   </data>
   <data name="AboutDialogLicense" xml:space="preserve">
-    <value>License:</value>
+    <value>许可证:</value>
     <comment>The label used as a heading above the app license text box in the about dialog</comment>
   </data>
   <data name="AboutDialogMoreInformation" xml:space="preserve">
-    <value>More information:</value>
+    <value>主页:</value>
     <comment>The label used as a heading above the app website address in the about dialog</comment>
   </data>
   <data name="AboutDialogTitle" xml:space="preserve">
-    <value>About Hourglass</value>
+    <value>关于</value>
     <comment>The window title for the about dialog</comment>
   </data>
   <data name="AppName" xml:space="preserve">
-    <value>Hourglass</value>
+    <value>沙漏</value>
     <comment>The name of the app</comment>
   </data>
   <data name="UsageDialogAboutHourglassHyperlinkText" xml:space="preserve">
-    <value>About Hourglass</value>
+    <value>关于沙漏</value>
     <comment>The text for the hyperlink that launches the about dialog from the usage dialog</comment>
   </data>
 </root>

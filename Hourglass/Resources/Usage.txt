@@ -1,4 +1,4 @@
-使用方法: {0} [选项] [<输入>]
+﻿使用方法: {0} [选项] [<输入>]
 一个简单的 Windows 倒数计时器。
 
 	<输入>
@@ -151,32 +151,30 @@
 	缩写		-s
 
 	--loop-sound on|off|last
-	Loops the sound that plays when the timer expires.
+	结束声不停止，循环播放。
 
 	必填		否
 	默认		last
 	缩写		-r
 
-  --open-saved-timers on|off|last
-        Opens all saved timers on start up.
+	--open-saved-timers on|off|last
+	启动时打开所有储存的计时。
 
-        Required        no
-        Default value   last
-        Alias           -v
+	必填		否
+	默认		last
+	缩写		-v
 
-  --prefer-24h-time on|off|last
-        When the input used to start the timer contains a time of day that does
-        not explicitly specify "am" or "pm", prefer interpreting the input as a
-        24-hour time rather than the closest 12-hour time to the current time.
+	--prefer-24h-time on|off|last
+	输入不明确是“上午”还是“下午”时，默认判定为 24 小时制。
+	关闭该功能，则判定为 12 小时制，以最接近的“上午”或“下午”为准。
 
-        For example, if the current time is 3:00 pm (15:00) and the input is
-        "until 05:00" the timer will --
-        - if this setting is on, count down until 5:00 am (05:00); or
-        - if this setting is off, count down until 5:00 pm (17:00).
+	例如，假设现在是下午三点，输入了“直到五点”：
+		该设置打开——计时到第二天早上 5:00
+		该设置关闭——计时到（最接近的）下午 5:00
 
-        Required        no
-        Default value   last
-        Alias           -j
+	必填		否
+	默认		last
+	缩写		-j
 
 	--window-title none|app|left|elapsed|title|last
 	设置窗口标题。
@@ -191,11 +189,11 @@
 		elapsed		已用时间
 		title		计时标题
 
-		left+title	剩余时间 � 计时标题
-		elapsed+title	已用时间 � 计时标题
+		left+title	剩余时间 · 计时标题
+		elapsed+title	已用时间 · 计时标题
 
-		title+left	计时标题 � 剩余时间
-		title+elapsed	计时标题 � 已用时间
+		title+left	计时标题 · 剩余时间
+		title+elapsed	计时标题 · 已用时间
 
 	必填		否
 	默认		last
@@ -243,7 +241,7 @@
 		--show-progress-in-taskbar	on
 		--do-not-keep-awake		off
 		--show-in-notification-area	off
-		--reverse-progress-bar		off
+		--reverse-progress-bar	off
 		--show-time-elapsed		off
 		--loop-timer			off
 		--pop-up-when-expired		on

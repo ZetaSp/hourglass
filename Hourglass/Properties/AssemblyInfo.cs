@@ -9,12 +9,12 @@ using System.Resources;
 using System.Runtime.InteropServices;
 using System.Windows;
 
-[assembly: AssemblyTitle("Hourglass")]
+[assembly: AssemblyTitle("沙漏")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Chris Dziemborowicz")]
-[assembly: AssemblyProduct("Hourglass")]
-[assembly: AssemblyCopyright("Copyright © 2021 Chris Dziemborowicz")]
+[assembly: AssemblyProduct("沙漏")]
+[assembly: AssemblyCopyright("版权所有 © 2021 Chris Dziemborowicz")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: AssemblyVersion("1.14.0.0")]

@@ -44,13 +44,13 @@ namespace Hourglass.Windows
                 string[] lines = License.Split('\r', '\n');
                 foreach (string line in lines)
                 {
-                    if (line.StartsWith("Copyright"))
+                    if (line.StartsWith("版权所有"))
                     {
                         return line;
                     }
                 }
 
-                throw new Exception("Could not find copyright line in license.");
+                throw new Exception("在许可证中找不到版权这行。");
             }
         }
 
