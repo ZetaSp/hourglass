@@ -8,7 +8,7 @@
         ResizeMode="NoResize"
         SizeToContent="WidthAndHeight"
         SnapsToDevicePixels="True"
-        Title="{x:Static properties:Resources.TimerWindowTitle}"
+        Title="{x:Static properties:Resources.AboutDialogTitle}"
         WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>

@@ -858,9 +858,9 @@ $</value>
     <value>暂停</value>
     <comment>The text for the pause button in the timer window, where the character following the optional underscore (_) is the access key</comment>
   </data>
-  <data name="TimerWindowResetButtonContent" xml:space="preserve">
-    <value>重置</value>
-    <comment>The text for the reset button in the timer window, where the character following the optional underscore (_) is the access key</comment>
+  <data name="TimerWindowRestartButtonContent" xml:space="preserve">
+    <value>重开</value>
+    <comment>The text for the restart button in the timer window, where the character following the optional underscore (_) is the access key</comment>
   </data>
   <data name="TimerWindowResumeButtonContent" xml:space="preserve">
     <value>恢复</value>
