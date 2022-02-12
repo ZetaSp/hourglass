@@ -1261,7 +1261,7 @@ $</value>
     <comment>The label used as a heading above the app website address in the about dialog</comment>
   </data>
   <data name="AboutDialogTitle" xml:space="preserve">
-    <value>关于</value>
+    <value>沙漏</value>
     <comment>The window title for the about dialog</comment>
   </data>
   <data name="AppName" xml:space="preserve">
